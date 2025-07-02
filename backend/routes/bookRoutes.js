@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const {
   createBook,
-  getAllBooks,
+  getBooks,
   getBookById,
   updateBook,
   deleteBook,
@@ -12,7 +12,7 @@ const authenticateToken = require("../middleware/authMiddleware");
 const authorizeRole = require("../middleware/roleMiddleware");
 
 // Public: Get all books or single book
-router.get("/", getAllBooks);
+router.get("/", getBooks);
 router.get("/:id", getBookById);
 
 // Admin only: Create, update, delete
