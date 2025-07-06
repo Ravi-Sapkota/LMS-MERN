@@ -14,6 +14,7 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/books", bookRoutes);
 app.use("/api/transactions", transactionRoutes);
+app.use("/api/admin", require("./routes/adminRoutes"));
 
 // TODO: Routes will be added here
 

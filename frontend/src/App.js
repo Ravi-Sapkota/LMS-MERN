@@ -4,6 +4,8 @@ import Register from "./pages/Register";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import MyBooks from "./pages/MyBooks";
+import AllTransactions from "./pages/AllTransactions";
+import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/mybooks" element={<MyBooks />} />
+          <Route path="/transactions" element={<AllTransactions />} />
+          <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
       </div>
     </Router>
