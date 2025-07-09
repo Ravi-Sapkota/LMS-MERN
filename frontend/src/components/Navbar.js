@@ -20,38 +20,38 @@ function Navbar() {
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav ms-auto">
           <li className="nav-item">
-            <Link className="nav-link" to="/">
+            <Link className="nav-link text-white" to="/">
               Home
             </Link>
           </li>
           {user?.role === "admin" && (
             <li className="nav-item">
-              <Link className="nav-link" to="/admin">
+              <Link className="nav-link text-white" to="/admin">
                 Dashboard
               </Link>
             </li>
           )}
           {user?.role === "admin" && (
             <li className="nav-item">
-              <Link className="nav-link" to="/transactions">
+              <Link className="nav-link text-white" to="/transactions">
                 Transactions
               </Link>
             </li>
           )}
 
           <li className="nav-item">
-            <Link className="nav-link" to="/mybooks">
+            <Link className="nav-link text-white" to="/mybooks">
               My Books
             </Link>
           </li>
 
           <li className="nav-item">
-            <Link className="nav-link" to="/register">
+            <Link className="nav-link text-white" to="/register">
               Register
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/login">
+            <Link className="nav-link text-white" to="/login">
               Login
             </Link>
           </li>
