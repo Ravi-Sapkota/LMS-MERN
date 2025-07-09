@@ -24,27 +24,61 @@ function Login() {
   };
 
   return (
-    <div className="col-md-6 mx-auto">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          className="form-control mb-2"
-          name="email"
-          type="email"
-          placeholder="Email"
-          onChange={handleChange}
-          required
-        />
-        <input
-          className="form-control mb-2"
-          name="password"
-          type="password"
-          placeholder="Password"
-          onChange={handleChange}
-          required
-        />
-        <button className="btn btn-success w-100">Login</button>
-      </form>
+    <div
+      className="container d-flex justify-content-center align-items-center vh-10 p-4 shadow gap-4"
+      style={{
+        background: "linear-gradient(to left, #4d4 30%, #007bff 50%)",
+        width: "800px",
+        borderRadius: "10px",
+      }}
+    >
+      <div
+        className="card p-4 border-0"
+        style={{ width: "100%", maxWidth: "400px" }}
+      >
+        <h3 className="text-center mb-4">Login</h3>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              className="form-control"
+              value={form.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="mb-3">
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              className="form-control"
+              value={form.password}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <button type="submit" className="btn btn-primary w-100">
+            Login
+          </button>
+        </form>
+
+        <p className="mt-3 text-center">
+          Don’t have an account? <a href="/register">Register</a>
+        </p>
+      </div>
+      <div
+        className="card p-4 border-0"
+        style={{ width: "100%", maxWidth: "400px" }}
+      >
+        <h3 className="text-center mb-4">Library Management System (LMS)</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/SanDiegoCityCollegeLearningResource_-_bookshelf.jpg/1200px-SanDiegoCityCollegeLearningResource_-_bookshelf.jpg"></img>
+        <p></p>
+      </div>
     </div>
   );
 }
