@@ -76,8 +76,10 @@ function Login() {
         style={{ width: "100%", maxWidth: "400px" }}
       >
         <h3 className="text-center mb-4">Library Management System (LMS)</h3>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/SanDiegoCityCollegeLearningResource_-_bookshelf.jpg/1200px-SanDiegoCityCollegeLearningResource_-_bookshelf.jpg"></img>
-        <p></p>
+        <img
+          alt="library bookshelves"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/SanDiegoCityCollegeLearningResource_-_bookshelf.jpg/1200px-SanDiegoCityCollegeLearningResource_-_bookshelf.jpg"
+        ></img>
       </div>
     </div>
   );
