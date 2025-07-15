@@ -44,12 +44,6 @@ function Navbar() {
               My Books
             </Link>
           </li>
-
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/register">
-              Register
-            </Link>
-          </li>
           <li className="nav-item">
             <Link className="nav-link text-white" to="/login">
               Login
