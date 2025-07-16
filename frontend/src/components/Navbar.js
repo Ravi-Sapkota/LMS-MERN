@@ -1,16 +1,23 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function Navbar() {
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Parse user data from localStorage if available
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
       setUser(JSON.parse(storedUser));
     }
   }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    setUser(null);
+    navigate("/login");
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
@@ -48,6 +55,14 @@ function Navbar() {
             <Link className="nav-link text-white" to="/login">
               Login
             </Link>
+          </li>
+          <li className="nav-item">
+            <button
+              className="btn btn-outline-light ms-2"
+              onClick={handleLogout}
+            >
+              Logout
+            </button>
           </li>
         </ul>
       </div>
