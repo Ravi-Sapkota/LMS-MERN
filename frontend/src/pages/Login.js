@@ -67,8 +67,11 @@ function Login() {
           </button>
         </form>
 
-        <p className="mt-3 text-center">
+        <p className="m-1 text-center">
           Don’t have an account? <a href="/register">Register</a>
+        </p>
+        <p className="m-0 text-center">
+          <a href="/forgotPassword">Forgot Password?</a>
         </p>
       </div>
       <div
