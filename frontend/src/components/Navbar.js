@@ -32,38 +32,49 @@ function Navbar() {
             </Link>
           </li>
           {user?.role === "admin" && (
-            <li className="nav-item">
-              <Link className="nav-link text-white" to="/admin">
-                Dashboard
-              </Link>
-            </li>
+            <>
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/admin">
+                  Dashboard
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/transactions">
+                  Transactions
+                </Link>
+              </li>
+            </>
           )}
-          {user?.role === "admin" && (
+
+          {user && (
             <li className="nav-item">
-              <Link className="nav-link text-white" to="/transactions">
-                Transactions
+              <Link className="nav-link text-white" to="/mybooks">
+                My Books
               </Link>
             </li>
           )}
 
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/mybooks">
-              My Books
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/login">
-              Login
-            </Link>
-          </li>
-          <li className="nav-item">
-            <button
-              className="btn btn-outline-light ms-2"
-              onClick={handleLogout}
-            >
-              Logout
-            </button>
-          </li>
+          {!user ? (
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/login">
+                Login
+              </Link>
+            </li>
+          ) : (
+            <>
+              <li className="nav-item">
+                <span className="nav-link text-white">👋 {user.fullName}</span>
+              </li>
+              <li className="nav-item">
+                <button
+                  className="btn btn-outline-light ms-2"
+                  onClick={handleLogout}
+                >
+                  Logout
+                </button>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </nav>
