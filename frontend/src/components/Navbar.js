@@ -63,7 +63,9 @@ function Navbar() {
           ) : (
             <>
               <li className="nav-item">
-                <span className="nav-link text-white">👋 {user.fullName}</span>
+                <Link className="nav-link text-white" to="/profile">
+                  👋 {user.fullName}
+                </Link>
               </li>
               <li className="nav-item">
                 <button

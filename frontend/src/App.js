@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import MyBooks from "./pages/MyBooks";
 import AllTransactions from "./pages/AllTransactions";
 import AdminDashboard from "./pages/AdminDashboard";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/mybooks" element={<MyBooks />} />
           <Route path="/transactions" element={<AllTransactions />} />
           <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="profile" element={<Profile />} />
         </Routes>
       </div>
     </Router>
