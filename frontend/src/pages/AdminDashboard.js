@@ -21,6 +21,9 @@ function AdminDashboard() {
   return (
     <div className="container mt-4">
       <h2>Admin Dashboard</h2>
+      <a href="/admin/addBook" className="btn btn-outline-primary mt-2">
+        + Add Book
+      </a>
       <div className="row mt-3">
         <div className="col-md-3">
           <div className="card text-white bg-primary mb-3">

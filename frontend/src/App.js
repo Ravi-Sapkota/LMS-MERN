@@ -8,6 +8,7 @@ import MyBooks from "./pages/MyBooks";
 import AllTransactions from "./pages/AllTransactions";
 import AdminDashboard from "./pages/AdminDashboard";
 import Profile from "./pages/Profile";
+import AddBook from "./pages/AddBook";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
           <Route path="/mybooks" element={<MyBooks />} />
           <Route path="/transactions" element={<AllTransactions />} />
           <Route path="/admin" element={<AdminDashboard />} />
-          <Route path="profile" element={<Profile />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/admin/addBook" element={<AddBook />} />
         </Routes>
       </div>
     </Router>
