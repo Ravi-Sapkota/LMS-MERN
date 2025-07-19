@@ -3,26 +3,11 @@ import API from "../services/api";
 
 function Profile() {
   const storedUser = JSON.parse(localStorage.getItem("user"));
-  const [name, setName] = useState(storedUser?.fullName || "");
   const [passwordForm, setPasswordForm] = useState({
     currentPassword: "",
     newPassword: "",
     confirmPassword: "",
   });
-
-  const handleNameUpdate = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await API.put(`/users/${storedUser.id}`, { fullName: name });
-      localStorage.setItem(
-        "user",
-        JSON.stringify({ ...storedUser, fullName: name })
-      );
-      alert("Name updated successfully");
-    } catch (err) {
-      alert(err.response?.data?.message || "Failed to update name");
-    }
-  };
 
   const handlePasswordChange = async (e) => {
     e.preventDefault();
@@ -49,20 +34,6 @@ function Profile() {
   return (
     <div className="container mt-4">
       <h2>Profile Settings</h2>
-
-      <form onSubmit={handleNameUpdate} className="mb-4">
-        <label className="form-label">Full Name</label>
-        <input
-          type="text"
-          value={name}
-          className="form-control"
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <button type="submit" className="btn btn-primary mt-2">
-          Update Name
-        </button>
-      </form>
 
       <form onSubmit={handlePasswordChange}>
         <h5>Change Password</h5>
