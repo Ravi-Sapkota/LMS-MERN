@@ -17,18 +17,18 @@ function Home() {
   };
 
   useEffect(() => {
-    fetchBooks(); // initial load
+    fetchBooks();
   }, []);
 
   const handleSearch = () => {
-    fetchBooks(search); // pass the current search term
+    fetchBooks(search);
   };
 
   const issueBook = async (bookId) => {
     try {
       await API.post(`/transactions/issue/${bookId}`);
       alert("Book issued successfully!");
-      fetchBooks(search); // refresh with current search filter
+      fetchBooks(search);
     } catch (err) {
       alert(err.response?.data?.message || "Issue failed");
     }

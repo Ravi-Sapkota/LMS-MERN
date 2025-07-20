@@ -17,6 +17,7 @@ function Login() {
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
       alert("Login successful");
+      window.location.href = "/";
       navigate("/");
     } catch (err) {
       alert(err.response?.data?.message || "Login failed");
